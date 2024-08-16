@@ -1,13 +1,11 @@
-[
-    {
-        "name": "AIGC",
-        "icon": "star",
-        "list": [
-            {
+{
+    "name": "AIGC",
+    "icon": "star",
+    "list": [
+        {
             "url": "https://chatgpt.com/",
             "name": "ChatGPT",
             "desc": "OpenAI"
-            }
-        ]
-    }
-]
+        }
+    ]
+}
