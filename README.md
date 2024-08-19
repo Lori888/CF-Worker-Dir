@@ -22,6 +22,9 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 4. `Route` 可以输入自己想使用的子域名，如果在根域名上使用直接把当前域名输入即可，`Worker` 选择上文快速安装好的Worker
 > `Route` 所使用的域名地址**必须已经解析好A记录**，如果没有能绑定的IP地址，可以输入8.8.8.8占位：）
 
+## 修改内容
+1. 在原项目的基础上增加了bg_url、favicon_url、css_url配置
+
 ## 系统配置
 
 CF-Worker-Dir允许用户自定义导航页面，配置内容如下：
@@ -31,8 +34,7 @@ CF-Worker-Dir允许用户自定义导航页面，配置内容如下：
 ```
 const config = {
 
-  bg_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/bg.jpg", //背景图片
-
+  bg_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/bg.jpg", //背景图
   favicon_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/icon.png", // 网站图标
 
   css_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/style.css", // 自定义css样式，可以修改背景色、背景图片等
