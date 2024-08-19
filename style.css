@@ -14,8 +14,8 @@ header {
 }
 
 #head {
-  /*background-image: linear-gradient(to top, #537895 0%, #09203f 100%);
-  background-image: linear-gradient(to top, #8e9553 0%, #09203f 100%);*/
+  background-image: linear-gradient(to top, #537895 0%, #09203f 100%);
+  /*background-image: linear-gradient(to top, #8e9553 0%, #09203f 100%);*/
   /* 背景图 尺寸推荐 1300x300-400 */
   /*background-image: url("https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/bg.jpg");*/
   /* 其他背景属性 */
