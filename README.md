@@ -23,7 +23,8 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 > `Route` 所使用的域名地址**必须已经解析好A记录**，如果没有能绑定的IP地址，可以输入8.8.8.8占位：）
 
 ## 修改内容
-1. 在原项目的基础上增加了bg_url、favicon_url、css_url配置
+1. 修改getFavicon中的google.cn为google.com
+2. 在原项目的基础上增加了bg_url、favicon_url、css_url配置
 
 ## 系统配置
 
