@@ -25,8 +25,13 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 ## 系统配置
 
 CF-Worker-Dir允许用户自定义导航页面，配置内容如下：
+注：在原项目的基础上增加了bg_url、favicon_url、css_url配置
 ```
 const config = {
+
+  bg_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/bg.jpg", //背景图片
+	favicon_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/icon.png", // 网站图标
+	css_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/style.css", // 自定义css样式，可以修改背景色、背景图片等
   title: "自定义导航",                 //自定义网站标题
   subtitle: "Cloudflare Workers Nav", //自定义网站副标题
   logo_icon: "sitemap",               //选择网站logo icon 暂时只支持 (eg:https://semantic-ui.com/elements/icon.html)
