@@ -6,7 +6,7 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 
 <details>
 <summary>📷程序截图</summary>
-<img src="https://i.loli.net/2020/02/14/ahU32dQxMct9ugX.png"/>
+<img src="snapshot.png"/>
 </details>
 
 ## 修改内容
