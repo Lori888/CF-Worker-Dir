@@ -3,8 +3,8 @@
  */
 const config = {
   bg_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/bg.jpg", //背景图片
-	favicon_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/icon.png", // 网站图标
-	css_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/style.css", // 自定义css样式，可以修改背景色、背景图片
+  favicon_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/icon.png", // 网站图标
+  css_url: "https://cdn.jsdelivr.net/gh/Lori888/CF-Worker-Dir/style.css", // 自定义css样式，可以修改背景色、背景图片
   title: "自定义导航",                 //write your website title
   subtitle: "Cloudflare Workers Dir", //write your website subtitle
   logo_icon: "sitemap",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
@@ -186,8 +186,8 @@ function renderHTML(index,seller) {
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>${config.title} - ${config.subtitle}</title>
       <!-- add favicon.ico -->
-		  <link rel="shortcut icon" href="${config.favicon_url}" />
-		  <link rel="bookmark" href="${config.favicon_url}" type="image/x-icon"　/>
+      <link rel="shortcut icon" href="${config.favicon_url}" />     
+      <link rel="bookmark" href="${config.favicon_url}" type="image/x-icon"　/>
       <link href="${config.css_url}" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
