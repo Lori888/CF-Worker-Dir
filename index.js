@@ -112,14 +112,26 @@ addEventListener('fetch', event => {
 /*通过分析链接 实时获取favicon
 * @url 需要分析的Url地址
 */
-function getFavicon(url){
-  if(url.match(/https{0,1}:\/\//)){
-    //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url.split('//')[1];
-    return "https://www.google.com/s2/favicons?sz=64&domain_url=" + url;
-  }else{
-    //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url;
-    return "https://www.google.com/s2/favicons?sz=64&domain_url=http://" + url;
-  } 
+// function getFavicon(url){
+//   if(url.match(/https{0,1}:\/\//)){
+//     //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url.split('//')[1];
+//     return "https://www.google.com/s2/favicons?sz=64&domain_url=" + url;
+//   }else{
+//     //return "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name=" + url;
+//     return "https://www.google.com/s2/favicons?sz=64&domain_url=http://" + url;
+//   } 
+// }
+  
+function getFavicon(url) {
+  url = url.split('//')[1].split('/')[0];
+  const favicon = "https://" + url + "/favicon.ico";
+  return favicon;
+}
+
+function getDefaultFavicon(url) {
+  url = url.split('//')[1].split('/')[0];
+  const default_icon = "https://ui-avatars.com/api/?bold=true&size=36&background=0D8ABC&color=fff&rounded=true&name="+url;
+  return default_icon;
 }
 
 /** Render Functions
@@ -149,7 +161,8 @@ function renderHeader(){
 
 function renderMain() {
   var main = config.lists.map((item) => {
-    const card = (url,name,desc)=> el('a',['class="card"',`href=${url}`,'target="_blank"'],el('div',['class="content"'],el('img',['class="left floated avatar ui image"',`src=${getFavicon(url)}`],"") + el('div',['class="header"'],name) + el('div',['class="meta"'],desc)));
+    // const card = (url,name,desc)=> el('a',['class="card"',`href=${url}`,'target="_blank"'],el('div',['class="content"'],el('img',['class="left floated avatar ui image"',`src=${getFavicon(url)}`,`onerror=${getDefaultFavicon(url)}`],"") + el('div',['class="header"'],name) + el('div',['class="meta"'],desc)));
+    const card = (url,name,desc)=> el('a',['class="card"',`href=${url}`,'target="_blank"'],el('div',['class="content"'],el('img',['class="left floated avatar ui image"',`src=${getFavicon(url)}`,`onerror=this.src='${getDefaultFavicon(url)}'`],"") + el('div',['class="header"'],name) + el('div',['class="meta"'],desc)));
     const divider = el('h4',['class="ui horizontal divider header"'],el('i',[`class="${item.icon} icon"`],"")+item.name);
 
     var content = el('div',['class="ui four stackable cards"'],item.list.map((link) =>{
