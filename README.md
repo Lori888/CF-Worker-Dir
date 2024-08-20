@@ -10,7 +10,7 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 </details>
 
 ## 修改内容
-1. 修改getFavicon中的google.cn为google.com
+1. 修改getFavicon
 2. 修改搜索栏百度和谷歌的顺序
 3. 在原项目的基础上增加了bg_url、favicon_url、css_url配置
 
