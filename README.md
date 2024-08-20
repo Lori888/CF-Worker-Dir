@@ -9,6 +9,11 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 <img src="https://i.loli.net/2020/02/14/ahU32dQxMct9ugX.png"/>
 </details>
 
+## 修改内容
+1. 修改getFavicon中的google.cn为google.com
+2. 修改搜索栏百度和谷歌的顺序
+3. 在原项目的基础上增加了bg_url、favicon_url、css_url配置
+
 ## 程序安装
 ### 快速安装
 1. 在 [Cloudflare Worker](https://workers.cloudflare.com/) 管理页面创建一个新的 **Worker** 。
@@ -21,11 +26,6 @@ CF-Worker-Dir是一款适用于Cloudflare Worker平台上的云函数程序，�
 3. 点击 `Add route` 设置新的路由
 4. `Route` 可以输入自己想使用的子域名，如果在根域名上使用直接把当前域名输入即可，`Worker` 选择上文快速安装好的Worker
 > `Route` 所使用的域名地址**必须已经解析好A记录**，如果没有能绑定的IP地址，可以输入8.8.8.8占位：）
-
-## 修改内容
-1. 修改getFavicon中的google.cn为google.com
-2. 修改搜索栏百度和谷歌的顺序
-3. 在原项目的基础上增加了bg_url、favicon_url、css_url配置
 
 ## 系统配置
 
